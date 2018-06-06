@@ -76,34 +76,22 @@ Plugins can be defined in 2 ways.
 **webpack.config.js**
 
 ```javascript
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.md$/,
-        use: [
-          'html-loader',
-          {
-            loader: 'markdown-it-loader',
-            options: {
-              plugins: [
-                // Just a string
-                'markdown-it-anchor',
-                // Array with options
-                [
-                  'markdown-it-anchor',
-                  {
-                    permalink: true,
-                    permalinkSymbol: '',
-                    level: 2
-                  }
-                ]
-              ]
-            }
-          }
-        ]
-      }
+{
+  loader: 'markdown-it-loader',
+  options: {
+    plugins: [
+      // Just a string
+      'markdown-it-anchor',
+      // Array with options
+      [
+        'markdown-it-anchor',
+        {
+          permalink: true,
+          permalinkSymbol: '',
+          level: 2
+        }
+      ]
     ]
   }
-};
+}
 ```
