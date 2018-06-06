@@ -1,5 +1,5 @@
 {
-  "name": "markdown-it-loader",
+  "name": "@intuit/markdown-it-loader",
   "version": "1.0.0",
   "description": "Load markdown files to html in webpack.",
   "main": "dist/markdown-it-loader.js",
