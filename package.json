@@ -7,7 +7,7 @@
     "name": "Andrew Lisowski",
     "email": "lisowski54@gmail.com"
   },
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "test": "jest",
     "lint": "xo",
