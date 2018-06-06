@@ -1,0 +1,50 @@
+{
+  "name": "markdown-it-loader",
+  "version": "1.0.0",
+  "description": "Load markdown files to html in webpack.",
+  "main": "dist/markdown-it-loader.js",
+  "author": {
+    "name": "Andrew Lisowski",
+    "email": "lisowski54@gmail.com"
+  },
+  "license": "ISC",
+  "scripts": {
+    "test": "jest",
+    "lint": "xo",
+    "build": "babel src -d dist --ignore '/__tests__/'"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^23.0.1",
+    "babel-preset-env": "^1.7.0",
+    "eslint-plugin-jest": "^21.17.0",
+    "jest": "^23.1.0",
+    "markdown-it-anchor": "^4.0.0",
+    "prettier": "^1.13.4",
+    "xo": "^0.21.1"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "loader-utils": "^1.1.0",
+    "markdown-it": "^8.4.1"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "xo": {
+    "extends": [
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "env": [
+      "jest"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
