@@ -62,16 +62,16 @@ module.exports = {
 
 This loader accepts any options that are allowed on `markdown-it`, those options can be found [here](https://github.com/markdown-it/markdown-it#init-with-presets-and-options).
 
-| Name                       | Type      | Default | Description                        |
+|            Name            |   Type    | Default | Description                        |
 | :------------------------: | :-------: | :-----: | :--------------------------------- |
-| **[`plugins`](#fallback)** | `{array}` | `[]`    | Plugins to load into `markdown-it` |
+| **[`plugins`](#fallback)** | `{array}` |  `[]`   | Plugins to load into `markdown-it` |
 
 ### `plugins`
 
 Plugins can be defined in 2 ways.
 
-1. Just a string with no options.
-2. An array where the first item is the plugin name and the second item is an object with options for that plugin.
+1.  Just a string with no options.
+2.  An array where the first item is the plugin name and the second item is an object with options for that plugin.
 
 **webpack.config.js**
 
@@ -94,4 +94,12 @@ Plugins can be defined in 2 ways.
     ]
   }
 }
+```
+
+### Example
+
+```
+cd example
+yarn
+yarn build
 ```
