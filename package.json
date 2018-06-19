@@ -20,6 +20,7 @@
     "babel-preset-env": "^1.7.0",
     "eslint-plugin-jest": "^21.17.0",
     "jest": "^23.1.0",
+    "jest-junit": "^5.1.0",
     "markdown-it-anchor": "^4.0.0",
     "prettier": "^1.13.4",
     "xo": "^0.21.1"
@@ -46,5 +47,24 @@
     "presets": [
       "env"
     ]
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageReporters": [
+      "cobertura",
+      "html",
+      "lcov"
+    ]
+  },
+  "jest-junit": {
+    "output": "./coverage/junit/junit.xml"
   }
 }

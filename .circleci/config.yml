@@ -1,0 +1,102 @@
+version: 2
+
+general:
+  artifacts:
+    - coverage/
+
+defaults: &defaults
+  working_directory: ~/markdown-it-vanilla-loader
+  docker:
+    - image: circleci/node:9.5.0
+    
+jobs:
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys: 
+            # # Find a cache corresponding to this specific package.json checksum
+            # # when this file is changed, this key will fail
+            - markdown-it-{{ .Branch }}-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+            - markdown-it-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - markdown-it-{{ .Branch }}
+            # # Find the most recent cache used from any branch
+            - markdown-it-master
+            - markdown-it-
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          key: markdown-it-{{ .Branch }}-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+          paths:
+            - ~/.cache/yarn
+            - node_modules
+      - persist_to_workspace:
+          root: .
+          paths:
+              - .
+  lint:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/markdown-it-vanilla-loader   
+      - run:
+          name: Lint
+          command: yarn lint
+  test:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/markdown-it-vanilla-loader 
+      - run:
+          name: Test
+          command: yarn test --ci
+          environment:
+            JEST_JUNIT_OUTPUT: "coverage/unit/junit.xml"
+      - store_test_results:
+          path: coverage/unit
+      - store_artifacts:
+          path: coverage/unit
+      - run:
+          name: Send CodeCov Results
+          command: bash <(curl -s https://codecov.io/bash) -t $CODECOV_KEY
+  # release:
+  #   <<: *defaults
+  #   steps:
+  #     - attach_workspace:
+  #         at: ~/markdown-it-vanilla-loader
+  #     - run: mkdir ~/.ssh && ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+  #     - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+  #     - run:
+  #         name: Release
+  #         command: npm run release
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build:
+          filters:
+            tags:
+              only: /.*/
+      - lint:
+          requires:
+              - build
+          filters:
+            tags:
+              only: /.*/
+      - test:
+          requires:
+              - build
+          filters:
+            tags:
+              only: /.*/
+      # - release:
+      #     requires:
+      #         - lint
+      #         - test
+      #     filters:
+      #       branches:
+      #         only:
+      #           - master
