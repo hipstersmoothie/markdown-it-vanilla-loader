@@ -1,4 +1,4 @@
-[![npm](https://img.shields.io/npm/dt/markdown-it-vanilla-loader.svg?style=for-the-badge)](https://www.npmjs.com/package/markdown-it-vanilla-loader
+[![npm](https://img.shields.io/npm/dt/markdown-it-vanilla-loader.svg?style=for-the-badge)](https://www.npmjs.com/package/markdown-it-vanilla-loader)
 
 <div align="center">
   <a href="https://github.com/webpack/webpack">
