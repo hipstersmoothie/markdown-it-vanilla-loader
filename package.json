@@ -7,7 +7,21 @@
     "name": "Andrew Lisowski",
     "email": "lisowski54@gmail.com"
   },
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hipstersmoothie/markdown-it-vanilla-loader"
+  },
+  "bugs": {
+    "url": "https://github.com/hipstersmoothie/markdown-it-vanilla-loader/issues",
+    "email": "lisowski54@gmail.com"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "markdown",
+    "markdown-it"
+  ],
+  "license": "Apache-2.0",
   "scripts": {
     "test": "jest",
     "lint": "xo",
@@ -19,6 +33,7 @@
     "babel-jest": "^23.0.1",
     "babel-preset-env": "^1.7.0",
     "eslint-plugin-jest": "^21.17.0",
+    "github-semantic-version": "^7.6.0",
     "jest": "^23.1.0",
     "jest-junit": "^5.1.0",
     "markdown-it-anchor": "^4.0.0",
@@ -66,5 +81,13 @@
   },
   "jest-junit": {
     "output": "./coverage/junit/junit.xml"
+  },
+  "gsv": {
+    "majorLabel": "major",
+    "minorLabel": "minor",
+    "patchLabel": "patch",
+    "internalLabel": "internal",
+    "releasedLabel": "Released",
+    "addReleasedLabelOnSuccess": true
   }
 }

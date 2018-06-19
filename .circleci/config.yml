@@ -61,16 +61,16 @@ jobs:
       - run:
           name: Send CodeCov Results
           command: bash <(curl -s https://codecov.io/bash) -t $CODECOV_KEY
-  # release:
-  #   <<: *defaults
-  #   steps:
-  #     - attach_workspace:
-  #         at: ~/markdown-it-vanilla-loader
-  #     - run: mkdir ~/.ssh && ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-  #     - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-  #     - run:
-  #         name: Release
-  #         command: npm run release
+  release:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/markdown-it-vanilla-loader
+      - run: mkdir ~/.ssh && ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+      - run:
+          name: Release
+          command: npm run release
 
 workflows:
   version: 2
@@ -92,11 +92,11 @@ workflows:
           filters:
             tags:
               only: /.*/
-      # - release:
-      #     requires:
-      #         - lint
-      #         - test
-      #     filters:
-      #       branches:
-      #         only:
-      #           - master
+      - release:
+          requires:
+              - lint
+              - test
+          filters:
+            branches:
+              only:
+                - master
