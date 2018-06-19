@@ -1,4 +1,4 @@
-import { renderMarkdown } from '../src/markdown-it-loader';
+import { renderMarkdown } from '../src/markdown-it-vanilla-loader';
 
 test('renderMarkdown', () => {
   expect(renderMarkdown('# Title')).toBe('<h1>Title</h1>\n');

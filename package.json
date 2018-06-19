@@ -1,8 +1,8 @@
 {
-  "name": "@intuit/markdown-it-loader",
+  "name": "markdown-it-vanilla-loader",
   "version": "1.0.0",
-  "description": "Load markdown files to html in webpack.",
-  "main": "dist/markdown-it-loader.js",
+  "description": "Load markdown files to html in webpack. Uses markdown-it and assumes nothing about your configuration.",
+  "main": "dist/markdown-it-vanilla-loader.js",
   "author": {
     "name": "Andrew Lisowski",
     "email": "lisowski54@gmail.com"
@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-jest": "^23.0.1",
     "babel-preset-env": "^1.7.0",
     "eslint-plugin-jest": "^21.17.0",
@@ -24,7 +25,6 @@
     "xo": "^0.21.1"
   },
   "dependencies": {
-    "babel-core": "^6.26.3",
     "loader-utils": "^1.1.0",
     "markdown-it": "^8.4.1"
   },

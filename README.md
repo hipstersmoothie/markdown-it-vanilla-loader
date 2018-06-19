@@ -3,14 +3,14 @@
     <img width="200" height="200"
       src="https://cdn.rawgit.com/webpack/media/e7485eb2/logo/icon.svg">
   </a>
-  <h1>Markdown-It Loader</h1>
+  <h1>Markdown-It-Vanilla-Loader</h1>
   <p>Uses <a href="https://github.com/markdown-it/markdown-it">markdown-it</a> to render markdown to HTML.</p>
 </div>
 
 ## Install
 
 ```bash
-yarn add -D markdown-it-loader
+yarn add -D markdown-it-vanilla-loader
 ```
 
 ## Usage
@@ -34,7 +34,7 @@ module.exports = {
         use: [
           'html-loader',
           {
-            loader: 'markdown-it-loader',
+            loader: 'markdown-it-vanilla-loader',
             options: {
               highlight: (code, language) => {
                 return language && highlightjs.getLanguage(language)
@@ -77,7 +77,7 @@ Plugins can be defined in 2 ways.
 
 ```javascript
 {
-  loader: 'markdown-it-loader',
+  loader: 'markdown-it-vanilla-loader',
   options: {
     plugins: [
       // Just a string

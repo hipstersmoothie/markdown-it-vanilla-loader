@@ -10,7 +10,7 @@ module.exports = {
           {
             loader: 'html-loader'
           },
-          '../dist/markdown-it-loader.js'
+          '../dist/markdown-it-vanilla-loader.js'
         ]
       }
     ]
