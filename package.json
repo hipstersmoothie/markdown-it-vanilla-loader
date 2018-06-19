@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-vanilla-loader",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Load markdown files to html in webpack. Uses markdown-it and assumes nothing about your configuration.",
   "main": "dist/markdown-it-vanilla-loader.js",
   "author": {
