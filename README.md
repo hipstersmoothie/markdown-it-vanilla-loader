@@ -1,3 +1,4 @@
+[![CircleCI branch](https://img.shields.io/circleci/project/github/hipstersmoothie/markdown-it-vanilla-loader/master.svg?style=for-the-badge)](https://circleci.com/gh/hipstersmoothie/markdown-it-vanilla-loader)
 [![npm](https://img.shields.io/npm/dt/markdown-it-vanilla-loader.svg?style=for-the-badge)](https://www.npmjs.com/package/markdown-it-vanilla-loader)
 
 <div align="center">
