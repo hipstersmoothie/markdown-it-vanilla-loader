@@ -1,10 +1,12 @@
+[![npm](https://img.shields.io/npm/dt/markdown-it-vanilla-loader.svg?style=for-the-badge)](https://www.npmjs.com/package/markdown-it-vanilla-loader
+
 <div align="center">
   <a href="https://github.com/webpack/webpack">
     <img width="200" height="200"
       src="https://cdn.rawgit.com/webpack/media/e7485eb2/logo/icon.svg">
   </a>
   <h1>Markdown-It-Vanilla-Loader</h1>
-  <p>Uses <a href="https://github.com/markdown-it/markdown-it">markdown-it</a> to render markdown to HTML.</p>
+  <p>Uses <a href="https://github.com/markdown-it/markdown-it">markdown-it</a> to render markdown to HTML and assumes nothing about your configuration.</p>
 </div>
 
 ## Install
