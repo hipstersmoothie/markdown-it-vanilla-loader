@@ -3,7 +3,11 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## 2018-06-20 - [1.0.9 - current version]
+## 2018-07-11 - [1.0.10 - current version]
+
+- 1.0.10 - ([48c0bec](https://github.com/hipstersmoothie/markdown-it-vanilla-loader/commit/48c0bec8d5484cc9a761adc8c48b6c9140b591d6)) - add license (@hipstersmoothie)
+
+## 2018-06-20
 
 - 1.0.9 - ([3efe7fe](https://github.com/hipstersmoothie/markdown-it-vanilla-loader/commit/3efe7fed798e23738703cbe9f87ed35f1098355e)) - add more badges (@hipstersmoothie)
 - 1.0.8 - ([c583db1](https://github.com/hipstersmoothie/markdown-it-vanilla-loader/commit/c583db13d3c5696aca496b91864c5cf8a0b2a7ef)) - bump version (@hipstersmoothie)
@@ -28,5 +32,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - 1.0.3 - ([26f76f3](https://github.com/hipstersmoothie/markdown-it-vanilla-loader/commit/26f76f389e444fb255e3f018773857d834482b2f)) - simplify docs (@hipstersmoothie)
 - 1.0.2 - ([380e9b2](https://github.com/hipstersmoothie/markdown-it-vanilla-loader/commit/380e9b26c712a75837de415528fbeccd445cafc0)) - document it (@hipstersmoothie)
 - 1.0.1 - ([809ee2b](https://github.com/hipstersmoothie/markdown-it-vanilla-loader/commit/809ee2ba8e16ae5d3369314902c98c3da054939d)) - initialize (@hipstersmoothie)
+
 
 
