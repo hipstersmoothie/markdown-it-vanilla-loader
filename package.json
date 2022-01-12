@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "loader-utils": "^1.1.0",
-    "markdown-it": "^8.4.1"
+    "markdown-it": "^12.3.2"
   },
   "prettier": {
     "singleQuote": true
